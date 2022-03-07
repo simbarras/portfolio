@@ -1,0 +1,171 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --hue: 200;
+  --saturation: 50%;
+  --foreground-color: hsl(var(--hue), var(--saturation), 75%);
+  --background-color: hsl(0, 0%, 8%);
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  /*overflow: hidden;*/
+}
+
+.paddle {
+  --position: 50;
+
+  position: absolute;
+  background-color: var(--foreground-color);
+  top: calc(var(--position) * 1vh);
+  transform: translateY(-50%);
+  width: 2vh;
+  height: 15vh;
+}
+
+.paddle.left {
+  left: 1vw;
+}
+
+.paddle.right {
+  right: 1vw;
+}
+
+.ball {
+  --x: 50;
+  --y: 50;
+
+  position: absolute;
+  background-color: var(--foreground-color);
+  left: calc(var(--x) * 1vw);
+  top: calc(var(--y) * 1vh);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5vh;
+  height: 2.5vh;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 7vh;
+  color: var(--foreground-color);
+}
+
+.score > * {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0 2vh;
+  margin: 1vh 0;
+  opacity: 0.5;
+}
+
+.score > :first-child {
+  text-align: right;
+  border-right: 0.5vh solid var(--foreground-color);
+}
+/* display background color black on navbar scroll */
+.navbarScroll.navbarDark {
+  background-color: black;
+}
+
+/* hero background image */
+.bgimage {
+  height: 100vh;
+  background-color: hsl(0, 0%, 8%);
+  background-size: cover;
+  position: relative;
+}
+/* text css above hero image*/
+.hero_title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: hsl(0, 0%, 60%);
+}
+.hero_title:hover {
+  text-decoration-color: none;
+  color: var(--foreground-color);
+}
+.hero_desc {
+  font-size: 2rem;
+  color: hsl(0, 0%, 60%);
+}
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* spacing on all sections */
+/* #about, #services, #portfolio, #contact {
+    margin-top: 4rem;
+    padding-top: 4rem;
+} */
+#contact {
+  padding-bottom: 4rem;
+}
+/* about section image css */
+.imageAboutPage {
+  width: 100%;
+}
+
+/* services section css */
+.servicesText.card {
+  height: 280px;
+  cursor: pointer;
+}
+.servicesIcon {
+  font-size: 36px;
+  text-align: center;
+  width: 100%;
+}
+.card-title {
+  text-align: center;
+}
+.card:hover .servicesIcon {
+  color: var(--foreground-color);
+}
+.servicesText:hover {
+  border: 1px solid var(--foreground-color);
+}
+
+/* social media icons styling */
+.social-icons {
+  font-size: 36px;
+  cursor: pointer;
+}
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-linkedin:hover,
+.fa-twitch:hover {
+  color: var(--foreground-color);
+}
+.fab {
+  color: hsl(0, 0%, 60%);
+}
+/* footer styling */
+#footer {
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+.navbar {
+  position: sticky !important;
+  top: 0px;
+  background-color: black;
+  z-index: 100;
+}
+
+section {
+    padding-top: 3rem;
+}
