@@ -6,15 +6,33 @@
 
 :root {
   --hue: 200;
-  --saturation: 50%;
+  --saturation: 40%;
   --foreground-color: hsl(var(--hue), var(--saturation), 75%);
-  --background-color: hsl(0, 0%, 8%);
+  --background1-color: hsl(0, 0%, 8%);
+  --background2-color: hsl(0, 0%, 92%);
 }
 
 body {
   margin: 0;
-  background-color: var(--background-color);
+  background-color: var(--background1-color);
   /*overflow: hidden;*/
+}
+
+section {
+    padding-bottom: 3rem;
+}
+
+.btn {
+    background-color: var(--foreground-color) !important;
+    border-color: var(--foreground-color) !important;
+}
+
+.btn:hover {
+    background-color: hsl(var(--hue), var(--saturation), 50%) !important;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 0.25rem hsl(var(--hue), var(--saturation), 90%) !important;
 }
 
 .paddle {
@@ -80,10 +98,15 @@ body {
   height: 100vh;
 }
 .odd {
-  background-color: hsl(0, 0%, 8%);
+  background-color: var(--background1-color);
   background-size: cover;
   position: relative;
 }
+.even {
+    background-color: var(--background2-color);
+    background-size: cover;
+    position: relative;
+  }
 /* text css above hero image*/
 .hero_title {
   font-size: 4.5rem;
@@ -109,7 +132,7 @@ body {
 }
 
 /* spacing on all sections */
-/* #about, #services, #portfolio, #contact {
+/* #about, #skills, #projects, #contact {
     margin-top: 4rem;
     padding-top: 4rem;
 } */
@@ -121,12 +144,14 @@ body {
   width: 100%;
 }
 
-/* services section css */
-.servicesText.card {
+/* skills section css */
+.skillsText.card {
   height: 280px;
   cursor: pointer;
+  background-color: var(--background1-color);
+  color: var(--background2-color);
 }
-.servicesIcon {
+.skillsIcon {
   font-size: 36px;
   text-align: center;
   width: 100%;
@@ -134,10 +159,11 @@ body {
 .card-title {
   text-align: center;
 }
-.card:hover .servicesIcon {
+.card:hover .skillsIcon,
+.card:hover .card-title {
   color: var(--foreground-color);
 }
-.servicesText:hover {
+.skillsText:hover {
   border: 1px solid var(--foreground-color);
 }
 
@@ -146,19 +172,18 @@ body {
   font-size: 36px;
   cursor: pointer;
 }
-.fa-facebook:hover,
 .fa-instagram:hover,
 .fa-twitter:hover,
 .fa-linkedin:hover,
-.fa-twitch:hover {
+.fa-github:hover {
   color: var(--foreground-color);
 }
 .fab {
-  color: hsl(0, 0%, 60%);
+  color: var(--background2-color);
 }
 /* footer styling */
 #footer {
-  background-color: var(--background-color);
+  background-color: var(--background1-color);
   text-align: center;
 }
 
@@ -177,15 +202,15 @@ body {
   opacity: 1;
 }
 
+/* Timeline css */
 h1 {
+  padding-top: 3rem;
+  color: var(--foreground-color);
+}
+#timeline {
   padding-top: 3rem;
 }
 
-/* Timeline css */
-#timeline > h1 {
-  padding-top: 6rem;
-  color: var(--foreground-color);
-}
 .timeline {
   position: relative;
   width: 100%;
@@ -279,7 +304,7 @@ h1 {
   height: 40px;
   padding: 9px 0;
   top: calc(50% - 20px);
-  background: hsl(0, 0%, 60%);
+  background: var(--background2-color);
   border: 2px solid var(--foreground-color);
   border-radius: 40px;
   text-align: center;
@@ -298,7 +323,7 @@ h1 {
 
 .container-timeline .content {
   padding: 30px 90px 30px 30px;
-  background: hsl(0, 0%, 50%);
+  background: var(--background2-color);
   position: relative;
   border-radius: 0 500px 500px 0;
 }
