@@ -455,3 +455,17 @@ h1 {
   height: 20%;
   bottom: 0;
 }
+
+/* Scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--background2-color);
+}
