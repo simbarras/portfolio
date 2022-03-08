@@ -16,13 +16,13 @@
 
 <body>
     <!-- Pong banner -->
-    <section class="bgimage" id="home">
+    <section class="odd home" id="home">
         <div class="container-fluid">
             <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
                 <h2 class="hero_title">Hi, it's me Simon</h2>
-                <p class="hero_desc">I am a actually a computer scientist student</p>
-                <a class="hero_title" href="#about"><i class="fas fa-arrow-down"></i></a>
+                <p class="hero_title hero_desc">I am a actually a computer scientist student</p>
+                <a class="hero_title hero_arrow" href="#about"><i class="fas fa-arrow-down"></i></a>
             </div>
             </div>
         </div>
@@ -51,6 +51,9 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#timeline">Timeline</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
@@ -66,12 +69,12 @@
     </nav>
 
     <!-- about section-->
-    <section id="about">
+    <section id="about" class="even">
         <div class="container mt-4 pt-4">
             <h1 class="text-center">About Me</h1>
             <div class="row mt-4">
                 <div class="col-lg-4">
-                    <img src="images/about.jpeg" class= "imageAboutPage" alt="">
+                    <img src="images/about1.jpg" class= "imageAboutPage" alt="">
                 </div>
 
                 <div class="col-lg-8">
@@ -103,6 +106,73 @@
                     </div>
                 </div>
             </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="odd" >
+        <h1 class="text-center">Timeline</h1>
+        <div class="timeline">
+            <div class="container-timeline left future">
+              <div class="date">15 Dec</div>
+              <i class="icon fa fa-home"></i>
+              <div class="content">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>
+                  Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                </p>
+              </div>
+            </div>
+            <div class="container-timeline right">
+              <div class="date">22 Oct</div>
+              <i class="icon fa fa-gift"></i>
+              <div class="content">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>
+                  Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                </p>
+              </div>
+            </div>
+            <div class="container-timeline left">
+              <div class="date">10 Jul</div>
+              <i class="icon fa fa-user"></i>
+              <div class="content">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>
+                  Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                </p>
+              </div>
+            </div>
+            <div class="container-timeline right">
+              <div class="date">18 May</div>
+              <i class="icon fa fa-running"></i>
+              <div class="content">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>
+                  Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                </p>
+              </div>
+            </div>
+            <div class="container-timeline left">
+              <div class="date">10 Feb</div>
+              <i class="icon fa fa-cog"></i>
+              <div class="content">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>
+                  Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                </p>
+              </div>
+            </div>
+            <div class="container-timeline right">
+              <div class="date">01 Jan</div>
+              <i class="icon fa fa-certificate"></i>
+              <div class="content">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>
+                  Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                </p>
+              </div>
+            </div>
+          </div>
     </section>
 
     <!-- services section-->

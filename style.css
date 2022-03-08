@@ -76,8 +76,10 @@ body {
 }
 
 /* hero background image */
-.bgimage {
+.home {
   height: 100vh;
+}
+.odd {
   background-color: hsl(0, 0%, 8%);
   background-size: cover;
   position: relative;
@@ -86,15 +88,16 @@ body {
 .hero_title {
   font-size: 4.5rem;
   font-weight: bold;
-  color: hsl(0, 0%, 60%);
+  color: var(--foreground-color);
+  opacity: 0.2;
 }
-.hero_title:hover {
+.hero_arrow:hover {
   text-decoration-color: none;
   color: var(--foreground-color);
+  opacity: 1;
 }
 .hero_desc {
   font-size: 2rem;
-  color: hsl(0, 0%, 60%);
 }
 .hero-text {
   text-align: center;
@@ -166,6 +169,207 @@ body {
   z-index: 100;
 }
 
-section {
-    padding-top: 3rem;
+.nav-item > a {
+  color: var(--foreground-color) !important;
+  opacity: 0.8;
+}
+.nav-link:hover {
+  opacity: 1;
+}
+
+h1 {
+  padding-top: 3rem;
+}
+
+/* Timeline css */
+#timeline > h1 {
+  padding-top: 6rem;
+  color: var(--foreground-color);
+}
+.timeline {
+  position: relative;
+  width: 100%;
+  margin: 0 0;
+  padding: 15px 0;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background: var(--foreground-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.container-timeline {
+  padding: 15px 30px;
+  position: relative;
+  background: inherit;
+  width: 50%;
+}
+
+.container-timeline.left {
+  left: 0;
+}
+
+.container-timeline.right {
+  left: 50%;
+}
+
+.container-timeline::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
+  background: #ffffff;
+  border: 2px solid var(--foreground-color);
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.container-timeline.right::after {
+  left: -8px;
+}
+
+.container-timeline::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: var(--foreground-color);
+  z-index: 1;
+}
+
+.container-timeline.right::before {
+  left: 8px;
+}
+
+.container-timeline .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 8px);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--foreground-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.container-timeline.left .date {
+  right: -75px;
+}
+
+.container-timeline.right .date {
+  left: -75px;
+}
+
+.container-timeline .icon {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 9px 0;
+  top: calc(50% - 20px);
+  background: hsl(0, 0%, 60%);
+  border: 2px solid var(--foreground-color);
+  border-radius: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: var(--foreground-color);
+  z-index: 1;
+}
+
+.container-timeline.left .icon {
+  right: 56px;
+}
+
+.container-timeline.right .icon {
+  left: 56px;
+}
+
+.container-timeline .content {
+  padding: 30px 90px 30px 30px;
+  background: hsl(0, 0%, 50%);
+  position: relative;
+  border-radius: 0 500px 500px 0;
+}
+
+.future .content {
+  border-color: var(--foreground-color);
+  border-style: dashed;
+  border-width: 3px;
+  background-color: hsl(0, 0%, 40%);
+}
+
+.container-timeline.right .content {
+  padding: 30px 30px 30px 90px;
+  border-radius: 500px 0 0 500px;
+}
+
+.container-timeline .content h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--foreground-color);
+}
+
+.container-timeline .content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+@media (max-width: 767.98px) {
+  .timeline::after {
+    left: 90px;
+  }
+
+  .container-timeline {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 30px;
+  }
+
+  .container-timeline.right {
+    left: 0%;
+  }
+
+  .container-timeline.left::after,
+  .container-timeline.right::after {
+    left: 82px;
+  }
+
+  .container-timeline.left::before,
+  .container-timeline.right::before {
+    left: 100px;
+    border-color: transparent var(--foreground-color) transparent transparent;
+  }
+
+  .container-timeline.left .date,
+  .container-timeline.right .date {
+    right: auto;
+    left: 15px;
+  }
+
+  .container-timeline.left .icon,
+  .container-timeline.right .icon {
+    right: auto;
+    left: 146px;
+  }
+
+  .container-timeline.left .content,
+  .container-timeline.right .content {
+    padding: 30px 30px 30px 90px;
+    border-radius: 500px 0 0 500px;
+  }
 }
