@@ -15,24 +15,26 @@
 body {
   margin: 0;
   background-color: var(--background1-color);
+  /*max-width: 100%;*/
+  overflow-x: hidden;
   /*overflow: hidden;*/
 }
 
 section {
-    padding-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 
 .btn {
-    background-color: var(--foreground-color) !important;
-    border-color: var(--foreground-color) !important;
+  background-color: var(--foreground-color) !important;
+  border-color: var(--foreground-color) !important;
 }
 
 .btn:hover {
-    background-color: hsl(var(--hue), var(--saturation), 50%) !important;
+  background-color: hsl(var(--hue), var(--saturation), 50%) !important;
 }
 
 .btn:focus {
-    box-shadow: 0 0 0 0.25rem hsl(var(--hue), var(--saturation), 90%) !important;
+  box-shadow: 0 0 0 0.25rem hsl(var(--hue), var(--saturation), 90%) !important;
 }
 
 .paddle {
@@ -103,10 +105,10 @@ section {
   position: relative;
 }
 .even {
-    background-color: var(--background2-color);
-    background-size: cover;
-    position: relative;
-  }
+  background-color: var(--background2-color);
+  background-size: cover;
+  position: relative;
+}
 /* text css above hero image*/
 .hero_title {
   font-size: 4.5rem;
@@ -397,4 +399,59 @@ h1 {
     padding: 30px 30px 30px 90px;
     border-radius: 500px 0 0 500px;
   }
+}
+
+/* DINO */
+.world {
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.score-dino {
+  position: absolute;
+  font-size: 3vmin;
+  left: 1vmin;
+  top: 1vmin;
+  color: var(--foreground-color);
+}
+
+.start-screen {
+  position: absolute;
+  font-size: 5vmin;
+  color: var(--foreground-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hide {
+  display: none;
+}
+
+.ground {
+  --left: 0;
+  position: absolute;
+  width: 300%;
+  bottom: 0;
+  left: calc(var(--left) * 1%);
+}
+
+.dino {
+  --bottom: 0;
+  position: absolute;
+  left: 1%;
+  height: 20%;
+  bottom: calc(var(--bottom) * 1%);
+}
+
+.cactus {
+  position: absolute;
+  left: calc(var(--left) * 1%);
+  height: 20%;
+  bottom: 0;
 }
