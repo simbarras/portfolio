@@ -148,10 +148,10 @@ section {
 
 /* skills section css */
 .skillsText.card {
-  height: 280px;
+  height: 350px;
   cursor: pointer;
-  background-color: var(--background1-color);
-  color: var(--background2-color);
+  background-color: var(--background2-color);
+  color: var(--background1-color);
 }
 .skillsIcon {
   font-size: 36px;
@@ -161,7 +161,12 @@ section {
 .card-title {
   text-align: center;
 }
-.card:hover .skillsIcon,
+.card .fa-angle-double-up{
+  color: hsl(136, 53%, 43%);
+}
+.card .fa-angle-up{
+  color: hsl(45, 96%, 50%);
+}
 .card:hover .card-title {
   color: var(--foreground-color);
 }
@@ -281,9 +286,11 @@ h1 {
 .container-timeline .date {
   position: absolute;
   display: inline-block;
-  top: calc(50% - 8px);
+  width: 4rem;
+  top: calc(50% - 1.5rem);
   text-align: center;
-  font-size: 14px;
+  vertical-align: middle;
+  font-size: 12px;
   font-weight: bold;
   color: var(--foreground-color);
   text-transform: uppercase;
@@ -292,11 +299,11 @@ h1 {
 }
 
 .container-timeline.left .date {
-  right: -75px;
+  right: -6.5rem;
 }
 
 .container-timeline.right .date {
-  left: -75px;
+  left: -6.5rem;
 }
 
 .container-timeline .icon {
@@ -468,4 +475,66 @@ h1 {
 
 ::-webkit-scrollbar-thumb {
   background: var(--background2-color);
+}
+
+/* Skill */
+.slider{
+  margin-top: 2rem;
+}
+.slider i,
+.slider img {
+  font-size: 5rem;
+  width: 5rem;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-6 * 26rem));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-6 * 26rem));
+  }
+}
+.slider {
+  background: var(--background2-color);
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider::before, .slider::after {
+  background: linear-gradient(to right, var(--background2-color) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite; 
+          animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(6rem * 52);
+}
+.slider .slide {
+  height: 100%;
+  width: 100%;
 }
