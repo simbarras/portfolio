@@ -167,11 +167,13 @@ section {
 
 /* skills section css */
 
-.skills .row {
+.skills .row,
+.projects .row {
     height: auto;
 }
 
-.skillsText.card {
+.skillsText.card,
+.projectsContent.card {
     height: 100%;
     cursor: pointer;
     background-color: var(--background2-color);
