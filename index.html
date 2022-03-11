@@ -2,10 +2,19 @@
 <html lang="en">
 
 <head>
-    <title>Projects Website-Brad</title>
+    <title>Simon Barras</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- icon -->
+    <link rel="icon" href="/favicon.ico" type="image/icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <!-- linking css file -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
@@ -41,6 +50,10 @@
     <nav class="navbar navbar-expand-lg navbar-nav-scroll navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Simon Barras</a>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/simbarras/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/simbarras" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -74,42 +87,49 @@
     <section id="about" class="even">
         <div class="container pt-4">
             <h1 class="text-center">About Me</h1>
-            <div class="row mt-4">
-                <div class="col-lg-4">
-                    <img src="images/about1.jpg" class="imageAboutPage" alt="">
-                </div>
-
-                <div class="col-lg-8">
-                    <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-                        electronic typesetting, remaining essentially unchanged
-
-                    </p>
-                    <div class="row mt-3">
-                        <div class="col-md-6">
-                            <ul>
-                                <li>Name: David Parker</li>
-                                <li>Age: 28</li>
-                                <li>Occupation: Web Developer</li>
-
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul>
-                                <li>Name: David Parker</li>
-                                <li>Age: 28</li>
-                                <li>Occupation: Web Developer</li>
-
-                            </ul>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card projectsContent">
+                        <!-- 853x467 -->
+                        <img class="card-img-top" src="images/about_snow.jpg" alt="Snow" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Who am I?</h4>
+                            <p class="card-text">
+                                My name is Simon Barras and I am a student in computer science. I live in a small village in the canton of Fribourg and I play soccer in a club since I was 5 years old. In winter I like to go snowboarding in the mountains while in summer I like to spending
+                                time with my friends on vacation.
+                            </p>
                         </div>
                     </div>
-                    <div class="row mt-3">
-                        <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                            into electronic typesetting, remaining essentially unchanged. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-                            book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                        </p>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card projectsContent">
+                        <img class="card-img-top" src="images/about_me.jpg" alt="Me" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">How am I?</h4>
+                            <p class="card-text">
+                                I am a very outgoing person, I like to meet new people and I integrate easily into teams. I try to bring a good dynamic within the group and I use my methodical mind to move the projects forward. I am pragmatic and focused on my tasks but I am always
+                                up for a beer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card projectsContent">
+                        <img class="card-img-top" src="images/about_copain.jpg" alt="Copains" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">What are my goals?</h4>
+                            <p class="card-text">
+                                I am ambitious and I want to work in teams at the cutting edge of technology. My goals for the end of my studies is to focus on efficient languages like C++ or GO in order to be a specialist. I also want to reach the same level for DevOps tools like K8s.
+                                In the next years, I also want to improve my German and especially my English.j
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <br>
+        </div>
     </section>
 
     <!-- Timeline -->
@@ -147,7 +167,7 @@
                 </div>
             </div>
             <div class="container-timeline right">
-                <div class="date">Summer<br>2020 to<br>2021</div>
+                <div class="date">Summer<br>2020 &<br>2021</div>
                 <i class="icon fa fa-briefcase"></i>
                 <div class="content">
                     <h2>Work in Telecomservices</h2>
@@ -225,8 +245,8 @@
                             <i class='fas skillsIcon fa-angle-double-up'></i>
                             <h4 class="card-title mt-3">DevOps</h4>
                             <p class="card-text mt-3">
-                                The "DevOps" philosophy is for me the future of software development. During my projects, I am committed to produce clear, maintainable and testable code. I understand and enjoy implementing CI/CD concepts using Github or GitLab pipelines, containers
-                                and Kubernetes.
+                                The"DevOps" philosophy is for me the future of software development. During my projects, I am committed to produce clear, maintainable and testable code. I understand and enjoy implementing CI/CD concepts using Github or GitLab pipelines, containers and
+                                Kubernetes.
                             </p>
                         </div>
                     </div>
@@ -238,7 +258,7 @@
                             <i class='fas skillsIcon fa-angle-double-up'></i>
                             <h4 class="card-title mt-3">Soft skills & management</h4>
                             <p class="card-text mt-3">
-                                I have been playing soccer since I was 5 years old, this has developed my team spirit. Moreover, I integrate easily in groups but I am also able to take the lead on "Waterfall" or "Scrum" projects. My methodical and pragmatic mind combined with my optimistic
+                                I have been playing soccer since I was 5 years old, this has developed my team spirit. Moreover, I integrate easily in groups but I am also able to take the lead on"Waterfall" or"Scrum" projects. My methodical and pragmatic mind combined with my optimistic
                                 personality allows me to move projects forward.
                             </p>
                         </div>
@@ -265,7 +285,7 @@
                             <i class='fas skillsIcon fa-angle-up'></i>
                             <h4 class="card-title mt-3">SysAdmin</h4>
                             <p class="card-text mt-3">
-                                I like to set up infrastructures with "UNIX like" operating systems. I often realize projects on my Homelab like the one to host this website. I pay a particular attention to the security because I find that this aspect is very important in our profession.
+                                I like to set up infrastructures with"UNIX like" operating systems. I often realize projects on my Homelab like the one to host this website. I pay a particular attention to the security because I find that this aspect is very important in our profession.
                                 I'm not comfortable in the administration of computer infrastructure with Microsoft tools.
                             </p>
                         </div>
@@ -437,13 +457,13 @@
             <h1 class="text-center">Projects</h1>
             <div class="row">
                 <div class="col-lg-4 mt-4">
-                    <div class="card">
+                    <div class="card projectsContent">
                         <img class="card-img-top" src="images/project_vinieamici.jpg" alt="Vini e amici" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">Stock and order management</h4>
                             <p class="card-text">
-                                The company "Vini e Amici" needed to be able to manage its stock of wine and these orders. Together with Roman Collaud we designed, developed, tested and deployed a solution. We created a PWA using Vue and Node technologies and we store the data in a
-                                Postgres database. All scripts are made in typescript and we put our application in production in a docker. I took care of the backend and deployment.
+                                The company"Vini e Amici" needed to be able to manage its stock of wine and these orders. Together with Roman Collaud we designed, developed, tested and deployed a solution. We created a PWA using Vue and Node technologies and we store the data in a Postgres
+                                database. All scripts are made in typescript and we put our application in production in a docker. I took care of the backend and deployment.
                             </p>
                             <small>
                                 Jan 2022 to Mar 2022
@@ -473,7 +493,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Eurobot</h4>
                             <p class="card-text">
-                                I participate to the "Eurobot" contest. The goal of this European competition is to create an autonomous robot that performs the requested actions in a requested time. We work in teams and different trades are present. Personally, I am in charge of the
+                                I participate to the"Eurobot" contest. The goal of this European competition is to create an autonomous robot that performs the requested actions in a requested time. We work in teams and different trades are present. Personally, I am in charge of the
                                 software part of a 5 axis robot arm. To achieve this, we use Python and mathematical techniques for function optimization.
                             </p>
                             <small>
@@ -536,7 +556,7 @@
 
     <!-- contact section-->
     <section id="contact" class="even">
-        <div class="container contactContent  pt-4">
+        <div class="container contactContent pt-4">
             <h1 class="text-center">Contact Me</h1>
 
             <div class="row mt-4">
