@@ -590,3 +590,24 @@ h1 {
     height: 100%;
     width: 100%;
 }
+
+.footer-info {
+    color: var(--background2-color);
+    vertical-align: text-bottom;
+    font-size: 0.75rem;
+    font-style: italic;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+.footer-info.copyright {
+    text-align: left;
+}
+
+.footer-info.inspired {
+    text-align: right;
+}
+
+.footer-info>p {
+    margin-top: 1rem;
+}
